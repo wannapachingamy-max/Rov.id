@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- เปลี่ยนคำโปรยใน Title -->
     <title>CHIEL . MON - ไอดี , ฝากขายไอดี Rov</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Mitr:wght@300;400;600&family=Chakra+Petch:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* --- สไตล์ธีมเวทมนตร์และแอนิเมชัน --- */
+        /* --- 🔴 ปรับโฉมเป็นธีมแดงสมรภูมิ RoV และแอนิเมชัน 🔴 --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Mitr', sans-serif;
-            background: linear-gradient(135deg, #0b1d16, #143224, #2d1a36);
-            color: #f3f9f6;
+            background: linear-gradient(135deg, #140507, #2a080c, #3d0c11);
+            color: #fcebe3;
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
@@ -20,15 +19,15 @@
         
         .leaf-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
         .leaf { position: absolute; top: -50px; width: 20px; height: 20px; background-size: contain; animation: fall linear infinite, sway ease-in-out infinite alternate; opacity: 0.6; }
-        .leaf:nth-child(even) { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23dfb15b"><path d="M17,8C15.24,5.87 11.29,4 7,4C6.23,4 5.5,4.07 4.79,4.21C4.08,5.08 3.62,6.17 3.5,7.37C3,12.31 6.5,17.29 11.5,18.5C11.5,19.5 12,20 12,20C12,20 12.5,19.5 12.5,18.5C16.89,17.44 20.17,13.78 20.5,9.15C20.5,8.74 20.32,8.34 20,8C19.14,8 18.09,8 17,8Z"/></svg>'); }
-        .leaf:nth-child(odd) { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f3a1b4"><path d="M17,8C15.24,5.87 11.29,4 7,4C6.23,4 5.5,4.07 4.79,4.21C4.08,5.08 3.62,6.17 3.5,7.37C3,12.31 6.5,17.29 11.5,18.5C11.5,19.5 12,20 12,20C12,20 12.5,19.5 12.5,18.5C16.89,17.44 20.17,13.78 20.5,9.15C20.5,8.74 20.32,8.34 20,8C19.14,8 18.09,8 17,8Z"/></svg>'); }
+        /* ปรับเศษเอฟเฟกต์พื้นหลังเป็นสีแดงเพลิงและแดงทอง */
+        .leaf:nth-child(even) { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff3344"><path d="M17,8C15.24,5.87 11.29,4 7,4C6.23,4 5.5,4.07 4.79,4.21C4.08,5.08 3.62,6.17 3.5,7.37C3,12.31 6.5,17.29 11.5,18.5C11.5,19.5 12,20 12,20C12,20 12.5,19.5 12.5,18.5C16.89,17.44 20.17,13.78 20.5,9.15C20.5,8.74 20.32,8.34 20,8C19.14,8 18.09,8 17,8Z"/></svg>'); }
+        .leaf:nth-child(odd) { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff9900"><path d="M17,8C15.24,5.87 11.29,4 7,4C6.23,4 5.5,4.07 4.79,4.21C4.08,5.08 3.62,6.17 3.5,7.37C3,12.31 6.5,17.29 11.5,18.5C11.5,19.5 12,20 12,20C12,20 12.5,19.5 12.5,18.5C16.89,17.44 20.17,13.78 20.5,9.15C20.5,8.74 20.32,8.34 20,8C19.14,8 18.09,8 17,8Z"/></svg>'); }
         
         @keyframes fall { 0% { top: -50px; } 100% { top: 100vh; } }
         @keyframes sway { 0% { transform: translateX(0) rotate(0deg); } 100% { transform: translateX(50px) rotate(180deg); } }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 2; }
         
-        /* ✨ ส่วนปรับแต่งหัวข้อร้านให้สวยและสมส่วนขึ้น ✨ */
         header { 
             text-align: center; 
             margin-bottom: 45px; 
@@ -39,29 +38,29 @@
             font-size: 2.3rem; 
             font-weight: 700;
             color: #ffffff; 
-            text-shadow: 0 0 10px rgba(223, 177, 91, 0.5); 
+            text-shadow: 0 0 10px rgba(255, 51, 68, 0.6); /* ออร่าแดงระดับผู้นำ */
             letter-spacing: 6px; 
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: inline-block;
         }
         header p {
             font-size: 1rem;
-            color: #a1bcae;
+            color: #e2c9ca;
             margin-top: 8px;
             letter-spacing: 1px;
             opacity: 0.85;
         }
         
-        /* 🌟 สไตล์พิเศษสำหรับเน้นคำว่า Rov ให้เรืองแสงสีทองเวทมนตร์ 🌟 */
+        /* 🔥 ออร่าแสงไฟเรืองแสงสีแดงเพลิงร้อนแรงสำหรับคำว่า Rov 🔥 */
         .glow-rov {
-            font-weight: 600;
-            color: #fff1cc;
-            text-shadow: 0 0 8px #dfb15b, 0 0 15px #dfb15b, 0 0 25px #bfa043;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 0 8px #ff1a3c, 0 0 15px #ff1a3c, 0 0 25px #ff8800;
             padding: 0 4px;
         }
 
         header:hover .shop-title { 
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 25px rgba(223, 177, 91, 0.8); 
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 25px rgba(255, 26, 60, 0.9); 
             transform: scale(1.04); 
         }
 
@@ -70,12 +69,12 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ตู้สินค้า */
+        /* ตู้สินค้าโทนดาร์กเรด */
         .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
         
         .product-card { 
-            background: rgba(18, 41, 30, 0.85); 
-            border: 2px solid #3c634e; 
+            background: rgba(42, 8, 12, 0.85); 
+            border: 2px solid #631c23; 
             border-radius: 20px; 
             padding: 20px; 
             position: relative; 
@@ -89,11 +88,11 @@
         
         .product-card:hover { 
             transform: translateY(-12px) rotateX(2deg) rotateY(2deg); 
-            border-color: #dfb15b; 
-            box-shadow: 0 15px 30px rgba(223, 177, 91, 0.25), 0 0 15px rgba(60, 99, 78, 0.5);
+            border-color: #ff3344; 
+            box-shadow: 0 15px 30px rgba(255, 51, 68, 0.25), 0 0 15px rgba(99, 28, 35, 0.5);
         }
 
-        /* ป้ายสถานะแบบเรืองแสงชัดเจน */
+        /* ป้ายสถานะ */
         .status-tag { 
             position: absolute; 
             top: 15px; 
@@ -118,22 +117,22 @@
         .product-card.card-sold { opacity: 0.65; }
         .product-card.card-sold:hover { opacity: 1; }
 
-        .img-box { width: 100%; height: 260px; background: #000; border-radius: 12px; overflow: hidden; margin-bottom: 15px; border: 1px solid #2a4b3b; transition: 0.3s; }
+        .img-box { width: 100%; height: 260px; background: #050102; border-radius: 12px; overflow: hidden; margin-bottom: 15px; border: 1px solid #4d1318; transition: 0.3s; }
         .img-box img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: transform 0.5s ease; }
         .product-card:hover .img-box img { transform: scale(1.06); }
-        .product-card:hover .img-box { border-color: #dfb15b; }
+        .product-card:hover .img-box { border-color: #ff3344; }
 
-        .p-id { font-family: 'Chakra Petch', sans-serif; font-size: 1.3rem; color: #fff1cc; margin-bottom: 5px; font-weight: 700; transition: 0.3s; }
+        .p-id { font-family: 'Chakra Petch', sans-serif; font-size: 1.3rem; color: #fcd9db; margin-bottom: 5px; font-weight: 700; transition: 0.3s; }
         .product-card:hover .p-id { color: #fff; transform: translateZ(15px); }
         
-        .p-desc { font-size: 0.9rem; color: #c9e2d5; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; text-align: left; min-height: 60px; white-space: pre-line; margin-bottom: 15px; flex-grow: 1; transition: 0.3s; }
-        .product-card:hover .p-desc { background: rgba(0, 0, 0, 0.35); color: #fff; }
+        .p-desc { font-size: 0.9rem; color: #f1d7d8; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 8px; text-align: left; min-height: 60px; white-space: pre-line; margin-bottom: 15px; flex-grow: 1; transition: 0.3s; }
+        .product-card:hover .p-desc { background: rgba(0, 0, 0, 0.45); color: #fff; }
 
-        /* 🛒 ปุ่มสนใจสั่งซื้อชีพจร */
+        /* 🛒 ปุ่มสั่งซื้อดีไซน์สกินแรร์ (แดงทอง) */
         .buy-btn { 
-            background: linear-gradient(90deg, #dfb15b, #bfa043); 
-            color: #0b1d16; 
-            border: none; 
+            background: linear-gradient(90deg, #ff3344, #b51220); 
+            color: #ffffff; 
+            border: 1px solid #ff99a2;
             padding: 11px; 
             border-radius: 10px; 
             font-family: 'Mitr', sans-serif; 
@@ -150,45 +149,45 @@
             animation: buttonPulse 2.5s infinite ease-in-out;
         }
         .buy-btn:hover { 
-            background: linear-gradient(90deg, #fff1cc, #dfb15b); 
-            box-shadow: 0 0 20px rgba(223, 177, 91, 0.8); 
+            background: linear-gradient(90deg, #ff6677, #ff3344); 
+            box-shadow: 0 0 20px rgba(255, 51, 68, 0.8); 
             transform: scale(1.04);
             animation-play-state: paused;
         }
 
         @keyframes buttonPulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(223, 177, 91, 0.4); }
-            50% { transform: scale(1.015); box-shadow: 0 0 10px 4px rgba(223, 177, 91, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(223, 177, 91, 0); }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 51, 68, 0.4); }
+            50% { transform: scale(1.015); box-shadow: 0 0 10px 4px rgba(255, 51, 68, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 51, 68, 0); }
         }
 
         /* ปุ่มลบ */
-        .del-btn { display: none; position: absolute; top: -10px; right: -10px; width: 30px; height: 30px; background: #ff4d4d; color: white; border: none; border-radius: 50%; cursor: pointer; font-weight: bold; z-index: 10; transition: 0.2s; }
-        .del-btn:hover { transform: scale(1.2) rotate(90deg); background: #ff1a1a; }
+        .del-btn { display: none; position: absolute; top: -10px; right: -10px; width: 30px; height: 30px; background: #ff3333; color: white; border: none; border-radius: 50%; cursor: pointer; font-weight: bold; z-index: 10; transition: 0.2s; }
+        .del-btn:hover { transform: scale(1.2) rotate(90deg); background: #cc0000; }
 
         /* แผงควบคุมแอดมิน */
         .admin-section { margin-top: 60px; text-align: center; }
-        .toggle-admin { background: #dfb15b; color: #0b1d16; padding: 12px 30px; border-radius: 50px; font-weight: 700; border: none; cursor: pointer; font-size: 1rem; transition: 0.3s; }
-        .toggle-admin:hover { background: #fff1cc; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(223, 177, 91, 0.4); }
+        .toggle-admin { background: #ff3344; color: #ffffff; padding: 12px 30px; border-radius: 50px; font-weight: 700; border: none; cursor: pointer; font-size: 1rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(255, 51, 68, 0.2); }
+        .toggle-admin:hover { background: #ff6677; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255, 51, 68, 0.5); }
         
-        .admin-panel { display: none; background: rgba(20, 40, 30, 0.95); border: 2px dashed #dfb15b; border-radius: 20px; padding: 30px; margin-top: 20px; text-align: left; animation: slideUp 0.4s ease-out; }
+        .admin-panel { display: none; background: rgba(30, 5, 8, 0.98); border: 2px dashed #ff3344; border-radius: 20px; padding: 30px; margin-top: 20px; text-align: left; animation: slideUp 0.4s ease-out; }
         @keyframes slideUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
         
-        .admin-panel label { display: block; margin-top: 10px; color: #dfb15b; font-size: 0.9rem; }
-        .admin-panel input, .admin-panel textarea, .admin-panel select { width: 100%; padding: 10px; margin-top: 5px; background: #08120e; border: 1px solid #3c634e; color: #fff; border-radius: 5px; font-family: 'Mitr', sans-serif; transition: 0.3s; }
-        .admin-panel input:focus, .admin-panel textarea:focus, .admin-panel select:focus { border-color: #dfb15b; outline: none; box-shadow: 0 0 8px rgba(223, 177, 91, 0.3); }
-        .save-btn { background: #dfb15b; color: #0b1d16; padding: 12px 20px; border: none; border-radius: 5px; font-weight: bold; margin-top: 20px; cursor: pointer; width: 100%; font-family: 'Mitr', sans-serif; font-size: 1rem; transition: 0.2s; }
-        .save-btn:hover { background: #fff1cc; box-shadow: 0 0 15px #dfb15b; }
+        .admin-panel label { display: block; margin-top: 10px; color: #ff6677; font-size: 0.9rem; }
+        .admin-panel input, .admin-panel textarea, .admin-panel select { width: 100%; padding: 10px; margin-top: 5px; background: #0f0204; border: 1px solid #631c23; color: #fff; border-radius: 5px; font-family: 'Mitr', sans-serif; transition: 0.3s; }
+        .admin-panel input:focus, .admin-panel textarea:focus, .admin-panel select:focus { border-color: #ff3344; outline: none; box-shadow: 0 0 8px rgba(255, 51, 68, 0.3); }
+        .save-btn { background: #ff3344; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-weight: bold; margin-top: 20px; cursor: pointer; width: 100%; font-family: 'Mitr', sans-serif; font-size: 1rem; transition: 0.2s; }
+        .save-btn:hover { background: #ff6677; box-shadow: 0 0 15px #ff3344; }
 
-        footer { text-align: center; margin-top: 60px; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 20px; }
-        .contact-link { color: #dfb15b; text-decoration: none; font-weight: 600; margin: 0 10px; transition: 0.2s; display: inline-block; }
-        .contact-link:hover { transform: translateY(-2px); color: #fff; text-shadow: 0 0 8px #dfb15b; }
+        footer { text-align: center; margin-top: 60px; padding: 20px; background: rgba(0,0,0,0.4); border-radius: 20px; }
+        .contact-link { color: #ff6677; text-decoration: none; font-weight: 600; margin: 0 10px; transition: 0.2s; display: inline-block; }
+        .contact-link:hover { transform: translateY(-2px); color: #fff; text-shadow: 0 0 8px #ff3344; }
 
-        /* กล่องป็อปอัปเวทมนตร์ */
+        /* กล่องป็อปอัป */
         .magic-modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(5, 14, 10, 0.85);
+            background: rgba(10, 2, 3, 0.9);
             backdrop-filter: blur(8px);
             z-index: 1000;
             display: flex;
@@ -200,28 +199,28 @@
         .magic-modal-overlay.active { opacity: 1; pointer-events: auto; }
         
         .magic-modal-card {
-            background: linear-gradient(145deg, #12291e, #1a3a2a);
-            border: 2px solid #dfb15b;
+            background: linear-gradient(145deg, #260508, #3d0c11);
+            border: 2px solid #ff3344;
             border-radius: 20px;
             padding: 30px;
             max-width: 420px;
             width: 90%;
             text-align: center;
-            box-shadow: 0 0 30px rgba(223, 177, 91, 0.3);
+            box-shadow: 0 0 30px rgba(255, 51, 68, 0.3);
             transform: scale(0.7) translateY(30px);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .magic-modal-overlay.active .magic-modal-card { transform: scale(1) translateY(0); }
 
-        .magic-modal-title { font-family: 'Cinzel', serif; color: #dfb15b; font-size: 1.5rem; margin-bottom: 15px; text-shadow: 0 0 10px rgba(223, 177, 91, 0.5); }
-        .magic-modal-text { font-size: 1rem; color: #d2e7dd; margin-bottom: 25px; line-height: 1.5; }
+        .magic-modal-title { font-family: 'Cinzel', serif; color: #ff3344; font-size: 1.5rem; margin-bottom: 15px; text-shadow: 0 0 10px rgba(255, 51, 68, 0.5); }
+        .magic-modal-text { font-size: 1rem; color: #fcd9db; margin-bottom: 25px; line-height: 1.5; }
         .magic-modal-buttons { display: flex; gap: 12px; justify-content: center; }
         
         .magic-popup-btn { padding: 10px 24px; font-family: 'Mitr', sans-serif; font-weight: 600; border-radius: 8px; border: none; cursor: pointer; min-width: 100px; transition: 0.2s; }
-        .magic-btn-confirm { background: #dfb15b; color: #0b1d16; }
-        .magic-btn-confirm:hover { background: #fff1cc; box-shadow: 0 0 15px #dfb15b; transform: translateY(-2px); }
-        .magic-btn-cancel { background: #264233; color: #c9e2d5; border: 1px solid #3c634e; }
-        .magic-btn-cancel:hover { background: #3c634e; color: #fff; }
+        .magic-btn-confirm { background: #ff3344; color: #fff; }
+        .magic-btn-confirm:hover { background: #ff6677; box-shadow: 0 0 15px #ff3344; transform: translateY(-2px); }
+        .magic-btn-cancel { background: #421115; color: #f1d7d8; border: 1px solid #631c23; }
+        .magic-btn-cancel:hover { background: #631c23; color: #fff; }
 
         .contact-order-box { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; text-align: left; }
         .contact-order-btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem; color: #fff; transition: 0.3s; transform: scale(1); }
@@ -238,7 +237,6 @@
     <div class="container">
         <header>
             <h1 class="shop-title">CHIEL . MON</h1>
-            <!-- แก้ไขคำโปรยตรงนี้ และครอบคำว่า Rov ด้วยคลาสเรืองแสง -->
             <p>ไอดี , ฝากขายไอดี <span class="glow-rov">Rov</span></p>
         </header>
 
@@ -471,7 +469,7 @@
                 const isEditing = box ? (box.style.display === 'block') : false;
 
                 if (list.length === 0) {
-                    grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #a1bcae; font-style: italic; padding: 40px 0;">✦ ขณะนี้ยังไม่มีรายการไอดีในตู้สินค้า ✦</p>`;
+                    grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #e2c9ca; font-style: italic; padding: 40px 0;">✦ ขณะนี้ยังไม่มีรายการไอดีในตู้สินค้า ✦</p>`;
                     return;
                 }
 
@@ -511,3 +509,4 @@
     </script>
 </body>
 </html>
+
